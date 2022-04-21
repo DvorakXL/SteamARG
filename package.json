@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "axios": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "steamapi": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "name": "steamdsbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvorakXL/SteamARG.git"
+  },
+  "author": "Qwerty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DvorakXL/SteamARG/issues"
+  },
+  "homepage": "https://github.com/DvorakXL/SteamARG#readme",
+  "description": "Discord bot that fetches information from Steam"
+}
