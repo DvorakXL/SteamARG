@@ -5,6 +5,7 @@
     "steamapi": "^2.2.0"
   },
   "devDependencies": {
+    "node": "^16.14.2",
     "nodemon": "^2.0.15"
   },
   "name": "steamdsbot",
