@@ -25,12 +25,12 @@ client.commands = new Collection()
 client.steam = steam
 client.taxes = config.steamTaxes
 
-const commands = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
+const commandsList = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
-for (const file of commands) {
+for (const file of commandsList) {
     const command = require(`./commands/${file}`)
 
-    //Set a new item in the collection
+    //Set a new command to the collection
     client.commands.set(command.name, command)
 }
 

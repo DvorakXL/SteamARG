@@ -22,13 +22,15 @@ const guildId = '621505053219487764';
 const guild = client.guilds.cache.get(guildId)
 
 client.slashCommands = new Collection()
+client.steam = steam
+client.taxes = config.steamTaxes
 
-const slashCommands = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
+const commandsList = fs.readdirSync('./slash-commands').filter(file => file.endsWith('.js'))
 
-for (const file of slashCommands) {
-    const command = require(`./commands/${file}`)
+for (const file of commandsList) {
+    const command = require(`./slash-commands/${file}`)
 
-    //Set a new item in the collection
+    //Set a new command to the collection
     client.slashCommands.set(command.name, command)
 }
 
@@ -43,7 +45,7 @@ client.on('interactionCreate', (interaction) => {
     if (interaction.isCommand()) {
         const command = client.slashCommands.get(interaction.commandName)
         if (!command) return
-        command.slashRun(client, interaction)
+        command.run(client, interaction)
     }
 })
 

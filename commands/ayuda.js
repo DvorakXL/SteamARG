@@ -11,7 +11,7 @@ module.exports = {
 
         client.commands.forEach(command => {
             helpEmbed.addField(command.name, command.description)
-        });
+        })
 
         msg.channel.send({ embeds: [helpEmbed] })
     }
