@@ -36,7 +36,8 @@ for (const file of commandsList) {
 
 client.on('ready', () => {
     const slashCommands = client.slashCommands.map(command => command.slash.toJSON())
-    client.guilds.cache.get("621505053219487764").commands.set(slashCommands)
+    // client.guilds.cache.get("YOUR GUILD ID").commands.set(slashCommands) // FOR TEST ONLY
+    client.application.commands.set(slashCommands)
 
     console.log(`Logged in as ${client.user.tag}!`)
 });

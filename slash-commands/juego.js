@@ -52,7 +52,6 @@ module.exports = {
         })
         .catch(err => {
             interaction.reply(`No se encontro ningun juego con **AppID: ${args[0].value}**`)
-            console.log(err)
         })
     }
 }
