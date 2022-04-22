@@ -17,10 +17,6 @@ let { TOKEN, STEAMTOKEN } = process.env
 const SteamAPI = require('steamapi')
 const steam = new SteamAPI(STEAMTOKEN)
 
-// Place your guild id here
-const guildId = '621505053219487764';
-const guild = client.guilds.cache.get(guildId)
-
 client.slashCommands = new Collection()
 client.steam = steam
 client.taxes = config.steamTaxes
