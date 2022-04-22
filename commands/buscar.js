@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'buscar',
-    description: `buscar [juego]. Muestra una lista de juegos con el nombre ingresado.`,
+    description: 'buscar [juego]. Muestra una lista de juegos con el nombre ingresado.',
     run(client, msg, args) {
         const argStr = args.join(' ');
         const games = client.steam.getAppList()

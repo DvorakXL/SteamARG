@@ -2,8 +2,13 @@ const { Client, Intents, Collection } = require('discord.js')
 const config = require('./config.json')
 const fs = require('fs')
 const client = new Client(
-    { intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.DIRECT_MESSAGE_REACTIONS] }
-)
+    { intents: [
+        Intents.FLAGS.GUILDS, 
+        Intents.FLAGS.GUILD_MESSAGES, 
+        Intents.FLAGS.DIRECT_MESSAGES, 
+        Intents.FLAGS.DIRECT_MESSAGE_REACTIONS
+    ] 
+})
 
 //  Get data from .env config file
 require('dotenv').config();

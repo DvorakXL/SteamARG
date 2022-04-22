@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'impuesto',
-    description: `impuesto [saldo]. Le agrega los impuestos al valor que ingresaste.`,
+    description: 'impuesto [precio]. Le agrega los impuestos al valor que ingresaste.',
     run(client, msg, args) {
         const gameList = new MessageEmbed()
             .setColor('#0099ff')

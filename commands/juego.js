@@ -1,10 +1,9 @@
 const htmlParse = require('../utils/remove-html-tags.js')
-
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'juego',
-    description: `juego [appId]. Muestra informacion sobre un juego de Steam.`,
+    description: 'juego [appId]. Muestra informacion sobre un juego de Steam.',
     run(client, msg, args) {
         var formatter = new Intl.NumberFormat('es-AR', {
             style: 'currency',
