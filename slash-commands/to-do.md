@@ -1,5 +1,5 @@
 ### TO-DO
 
-✅ Add slash commands for every command
-⬛ Make slash and legacy commands work at the same time
-⬛ Tidy up code
+✅ Add slash commands for every command \n
+⬛ Make slash and legacy commands work at the same time \n
+⬛ Tidy up code \n
