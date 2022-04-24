@@ -1,3 +1,5 @@
+const Sorter = require('../utils/sort-alphabetical')
+
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
@@ -13,6 +15,7 @@ module.exports = {
                 .setTimestamp()
 
             matched = data.filter(game => game.name.toLowerCase().includes(argStr.toLowerCase()))
+            Sorter.SortStringProperty(matched, 'name')
             matched.slice(0,15).forEach(match => {
                 gameList.addField(match.name, `AppID: ${match.appid}`, inline=true)
             })

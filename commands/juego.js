@@ -1,4 +1,4 @@
-const htmlParse = require('../utils/remove-html-tags.js')
+const HtmlParser = require('../utils/remove-html-tags.js')
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
             .addField('Cantidad de logros', data.achievements ? data.achievements.total.toString() : '0')
             .addField('Categorias', genres.length ? genres.join(', ') : '-')
             .addField('Numero de Jugadores', (await client.steam.getGamePlayers(args)).toString())
-            .addField('Requisitos minimos', data.pc_requirements.minimum ? htmlParse.ReplaceHTMLTags(data.pc_requirements.minimum).split('\n').slice(1).join('\n') : 'No se especificaron los requisitos', inline=true) // Elimina tags html y los titulos
+            .addField('Requisitos minimos', data.pc_requirements.minimum ? HtmlParser.ReplaceHTMLTags(data.pc_requirements.minimum).split('\n').slice(1).join('\n') : 'No se especificaron los requisitos', inline=true) // Elimina tags html y los titulos
             .addField('Requisitos recomendados', data.pc_requirements.recommended ? htmlParse.ReplaceHTMLTags(data.pc_requirements.recommended).split('\n').slice(1).join('\n') : 'No se especificaron los requisitos', inline=true) // Elimina tags html y los titulos
             .setImage(data.header_image) //Imagen del juego
 

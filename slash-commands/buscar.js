@@ -1,4 +1,4 @@
-const htmlParse = require('../utils/remove-html-tags.js')
+const Sorter = require('../utils/sort-alphabetical')
 
 const { MessageEmbed } = require('discord.js')
 const { SlashCommandBuilder } = require('@discordjs/builders')
@@ -31,6 +31,8 @@ module.exports = {
                 .setTimestamp()
 
             matched = data.filter(game => game.name.toLowerCase().includes(args[0].value.toLowerCase()))
+
+            Sorter.SortStringProperty(matched, 'name')
             
             //Check if input was given anf if it's too large
             if ( !args[1] || args[1].value > Math.floor(matched.length/15) ) {
